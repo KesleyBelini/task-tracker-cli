@@ -1,0 +1,27 @@
+### IDEs ###
+.idea/
+*.iml
+.vscode/
+
+### Compilação ###
+out/
+target/
+bin/
+*.class
+*.log
+
+### Arquivos de sistema ###
+.DS_Store
+
+### Maven ###
+dependency-reduced-pom.xml
+
+### Arquivo de dados (não deve ir pro repositório) ###
+tarefas.json
+
+### NetBeans ###
+nbbuild/
+nbdist/
+nbproject/private/
+dist/
+.nb-gradle/
