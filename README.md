@@ -1,29 +1,65 @@
-# 🧩 Task Tracker CLI
+# Task Tracker CLI
 
-Um gerenciador simples de tarefas para terminal, feito em Java, com persistência em JSON e foco na prática de lógica, enums, coleções e leitura/escrita de arquivos.
+Um gerenciador de tarefas via terminal, feito em Java, com persistência em JSON e foco no aprendizado de lógica, estruturas de dados, enums e organização em camadas.
+
+---
 
 ## ✨ Funcionalidades
-- [x] Criar tarefas
-- [x] Editar tarefas
-- [x] Remover tarefas
-- [x] Filtrar por status
-- [x] Atualizar status
-- [x] Persistência em `tarefas.json`
 
-## 🛠️ Tecnologias
+- ✅ Criar tarefas com descrição
+- ✅ Editar descrição de tarefas
+- ✅ Excluir tarefas
+- ✅ Listar todas as tarefas com visual lúdico (emojis)
+- ✅ Filtrar tarefas por status (Pendente, Em andamento, Concluída)
+- ✅ Atualizar o status de uma tarefa
+- ✅ Persistência automática em arquivo JSON (`tarefas.json`)
+
+---
+
+## 🛠️ Tecnologias e conceitos
+
 - Java 17
-- Gson
-- POO (Classes, Enums, Encapsulamento)
-- CLI com `Scanner`
-- Lógica de programação
+- Gson (Google JSON library)
+- POO com Classes, Enums, Encapsulamento
+- Entrada e saída com `Scanner`
+- Organização em camadas: CLI, Service, Repository, Model, Utils
+- Leitura e escrita de arquivos com `BufferedReader` e `FileWriter`
 
-## 🚀 Como rodar
+---
+
+## 🚀 Como rodar o projeto
+
+### 1. Compile os arquivos:
+
 ```bash
-javac -d out src/com/tasktrackercli/**/*.java
+javac -d out src/main/java/com/tasktrackercli/**/*.java
+```
+
+### 2. Execute o programa:
+
+```bash
 java -cp out com.tasktrackercli.Main
 ```
 
+---
+
 ## 💡 Futuras melhorias
-- Testes com JUnit 
-- Exportar backups 
-- Interface gráfica ou REST API
+
+- 🔍 Testes automatizados com JUnit
+- 💾 Backup automático do arquivo de tarefas
+- 🖼 Interface gráfica com JavaFX ou
+- 🌐 API REST com Spring Boot
+- 📅 Suporte a prazos e prioridades
+
+---
+
+## 📌 Objetivo do projeto
+
+Esse projeto foi criado com o objetivo de:
+- Consolidar fundamentos de Java puro
+- Aplicar boas práticas de estruturação de código
+- Compartilhar conhecimento com a comunidade
+
+---
+
+> Desenvolvido com 💻 por [Kesley Belini](https://github.com/KesleyBelini)
