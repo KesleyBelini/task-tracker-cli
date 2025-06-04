@@ -10,7 +10,6 @@ import java.util.List;
 
 import static com.tasktrackercli.utils.LoggerUtils.log;
 
-
 public class TaskService {
     private final TaskRepository repositorio;
     private List<Task> listaDeTarefas = new ArrayList<>();
@@ -58,7 +57,7 @@ public class TaskService {
     public List<Task> pegarListaDeTarefas() {
         if (listaDeTarefas.isEmpty()) {
             log("[INFO] Nenhuma tarefa encontrada");
-         return null;
+            return null;
         } else {
             return new ArrayList<>(listaDeTarefas);
         }

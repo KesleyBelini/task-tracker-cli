@@ -9,7 +9,6 @@ import com.tasktrackercli.utils.TaskFormatter;
 import java.util.List;
 import java.util.Scanner;
 
-
 public class TaskCLI {
     private final TaskService service;
     private final Scanner sc;
@@ -58,7 +57,7 @@ public class TaskCLI {
             System.out.println("[ERRO] Opção inválida, tente novamente: ");
             sc.next();
         }
-        return  sc.nextInt();
+        return sc.nextInt();
     }
 
     public void adicionarTarefa() {
@@ -81,8 +80,6 @@ public class TaskCLI {
 
     public void listarTarefasPorStatus() {
         limparBuffer();
-        editarStatusTarefa();
-        exibirStatusDisponiveis();
         System.out.println("[INFO] Escolha um status: ");
         String statusInput = sc.nextLine().replace(" ", "_").toUpperCase();
 
@@ -94,7 +91,7 @@ public class TaskCLI {
             if (listaDeTarefasPorStatus.isEmpty()) {
                 System.out.println("[INFO] Nenhuma tarefa encontrada com o status: " + statusEnum);
             } else {
-                System.out.println("\n--- Lista de Tarefas com o Status: " + statusEnum +" ---");
+                System.out.println("\n--- Lista de Tarefas com o Status: " + statusEnum + " ---");
                 for (Task tarefa : listaDeTarefasPorStatus) {
                     System.out.println(TaskFormatter.formatarExibicaoTarefa(tarefa));
                 }
@@ -160,7 +157,8 @@ public class TaskCLI {
                 try {
                     novoStatus = StatusTaskEnum.valueOf(entradaStatus);
                 } catch (IllegalArgumentException e) {
-                    System.out.println("[ERRO] Status inválido! Opções disponíveis: Pendente, Em andamento, Concluído.");
+                    System.out
+                            .println("[ERRO] Status inválido! Opções disponíveis: Pendente, Em andamento, Concluído.");
                 }
             }
             service.mudarStatusTarefa(idTarefa, novoStatus);
